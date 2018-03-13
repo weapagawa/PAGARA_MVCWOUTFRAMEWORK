@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Inventory</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <script src="js/jQuery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-layers.min.js"></script>
+    <script src="js/init.js"></script>
+
+    <link rel="stylesheet" href="css/skel.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-xlarge.css" />
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+
+
+<body>
+    <header id="header">
+        <h1><a href="about.html">BYB</a></h1>
+        <nav id="nav">
+            <ul>
+                <li><a href="home.html">Me</a></li>
+                <li><a href="inventory.html" class="button special">Books</a></li>
+                <li><a href="post_ad.html">Post Ad</a></li>
+                <li><a href="mywish.html">Wishlist</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="one" class="wrapper style1 special">
+        <header class="major">
+            <h2>All the books uploaded are in here!</h2>
+            <p>This is where you'll find all the books available uploaded by user</p>
+        </header>
+
+        <div class="row">
+            <div class="6u 12u$(3)">
+                <ul class="actions fit">
+                    <li><a onclick="display_all();" class="button fit special">All Books</a></li>
+                    <li><a onclick="display_fic();" class="button fit alt">Fiction</a></li>
+                </ul>
+            </div>
+            <div class="6u$ 12u$(3)">
+                <ul class="actions fit">
+                    <li><a onclick="display_nonfic();" class="button fit special">Non-Fiction</a></li>
+                    <li><a onclick="display_acads();" class="button fit alt">Educational</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="container"><br>
+        <div class="table-wrapper">
+            <table class="alt" id="tablenisya">
+                <thead>
+                <tr>
+                    <th>Book Name</th>
+                    <th>Book Description</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th>Photo</th>
+                    <th>Details & Specification</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+            </table><br>
+             <div id="showme_all" class="table"></div>
+             <div id="showme_fic" class="table"></div>
+             <div id="showme_nonfic" class="table"></div>
+             <div id="showme_acads" class="table"></div>
+        </div>
+    </div>
+
+
+<!-- first modal -->
+    <div class="modal fade" id="squarespaceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                    <h3 class="modal-title" id="lineModalLabel">Confrim Rental</h3>
+                </div>
+                <div class="modal-body">
+                    <p> You are about to rent: </p> {#insert book name here#}
+                    <p> for </p>  {##insert per week price rate#/week#}
+{#                    <p> All weekly rentals are automatically renewed until #this book# is returned.</p>#}
+                </div>
+
+                <div class="modal-footer">
+                    <div class="btn-group btn-group-justified" role="group" aria-label="group button">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default" data-dismiss="modal"  role="button">Cancel</button>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <button type="button" id="saveImage" class="btn btn-default btn-hover-green" data-action="save" role="button">Rent Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- second modal // to do: connect this to first modal's "rent now" button-->
+    <div class="modal fade" id="saveImage" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                    <h3 class="modal-title" id="lineModalLabel">Contact Book Owner</h3>
+                </div>
+                <div class="modal-body">
+                    <p>This book belongs to #book owner# please contact</p>
+                    <p>#mobile number#</p>
+                    <p>#email account#</p>
+                    <p>#social media account#</p>
+                    <p> or  visit #href# profile</p>
+                </div>
+
+                <div class="modal-footer">
+                    <div class="btn-group btn-group-justified" role="group" aria-label="group button">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default" data-dismiss="modal"  role="button">Cancel</button>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <button type="button" id="saveImage" class="btn btn-default btn-hover-green" data-action="save" role="button">Im Good?</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <div id="footer">
+        <div class="container">
+            <div class="row centered">
+                <p>&copy; Untitled. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+	<head>
+		<meta charset="UTF-8">
+		<title>Post an Ad</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+
+
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+
+
+
+	</head>
+	<body>
+
+
+	<!-- Header -->
+			<header id="header">
+				<h1><a href="about.html">BYB</a></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="home.html">Me</a></li>
+						<li><a href="inventory.html">Books</a></li>
+						<li><a href="post_ad.html" class="button special">Post Ad</a></li>
+                        <li><a href="mywish.html">Wishlist</a></li>
+                         <li><a href="logout.html">Logout</a></li>
+					</ul>
+				</nav>
+			</header>
+
+
+
+    <div class="container">
+        <br><br>
+          <fieldset>
+                     <!-- Text input-->
+                      <label class="col-md-4 control-label" for="book_name">Book Name</label>
+                      <div class="col-md-4">
+                          <input id="book_name" name="book_name" type="text" placeholder="" class="form-control input-md">
+                      </div><br>
+
+
+                    <!-- Textarea -->
+                      <label class="col-md-4 control-label" for="book_description">Book Description</label>
+                      <div class="col-md-4">
+                        <textarea class="form-control" id="description" name="description"></textarea>
+                      </div><br>
+
+
+                    <!-- Text input-->
+                      <label class="col-md-4 control-label" for="price">Price</label>
+                      <div class="col-md-4">
+                      <input id="price" name="price" type="text" placeholder="(rate per week)" class="form-control input-md">
+                      </div><br>
+
+
+                    <!-- Select Basic -->
+                      <label class="col-md-4 control-label" for="category">Category</label>
+                      <div class="col-md-4">
+                        <select id="category" name="category" class="form-control">
+                          <option value="0">Choose Category</option>
+                          <option value="Fiction">Fiction</option>
+                          <option value="Non-Fiction">Non-Fiction</option>
+                          <option value="Academics">Academics</option>
+                        </select>
+                      </div><br>
+
+
+                    <!-- File Button -->
+                      <label class="col-md-4 control-label" for="upload_photo">Upload Photo</label>
+                      <div class="col-md-4">
+                        <input id="photo" name="photo" class="input-file" type="file">
+                      </div><br>
+
+
+                    <!-- Textarea -->
+                      <label class="col-md-4 control-label" for="details">Details & Conditions</label>
+                      <div class="col-md-4">
+                        <textarea class="form-control" id="details" name="details"></textarea>
+                      </div><br>
+
+
+                    <!-- Button -->
+                      <label class="col-md-4 control-label" for="singlebutton"></label>
+                      <div class="col-md-4">
+                          <a onclick="postmyad1()" class="button">Post My Ad</a>
+                       </div>
+            </fieldset>
+        </br>
+    </div>
+
+
+			<div id="footer">
+					<div class="container">
+						<div class="row centered">
+							<p>&copy; Untitled. All rights reserved.</p>
+						</div>
+					</div>
+			</div><! --/footerwrap -->
+
+	<script src="js/jquery.min.js"></script>
+    <script src="js/jQuery-2.1.4.min.js"></script>
+	<script src="js/app.js"></script>
+   	<script src="js/bootstrap.min.js"></script>
+
+	</body>
+</html>
